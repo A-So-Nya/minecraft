@@ -1,0 +1,2 @@
+# mc
+Guidelines for everyone.
