@@ -6,13 +6,9 @@
 
 Аргументы запуска (_**JVM флаги**_) — отличный способ облегчить жизнь твоему сборщику мусора и в целом начать использовать ресурсы комьютера более эффективно. Учти, что некоторым флагам может понадобиться полная версия джавы, т. е. **[`JDK`](https://adoptopenjdk.net/)** (или **[`серверная JRE`](https://www.oracle.com/java/technologies/javase-server-jre8-downloads.html)**)  
 #
-> Ооптимизация сборщика мусора **G1GC** (_Aikar's arguments_): [`клик`](https://aikar.co/2018/07/02/tuning-the-jvm-g1gc-garbage-collector-flags-for-minecraft/)  
-_**TIP:** По моему опыту, больше подходит для сервера, нежели для клиента._  
-
-> Оптимизация аргументов для клиента: [`клик`](https://cwelth.com/manuals.php?mid=2)[¹](https://docs.google.com/document/d/1Y9bijAyuXMlbCs9ttR5X1DOGzK-yq353zS70X01M9hY/edit?usp=sharing) [²](https://pastebin.com/VX5K9NW7) [³](https://gist.github.com/nightloli/36a6ac3558449452b121db030c86ee27)
-
-> Матчасть про **JVM флаги** на хабре: [`клик`](https://habr.com/ru/post/160049/)
-
+* Оптимизация сборщика мусора **G1GC** (_Aikar's arguments_): [`клик`](https://aikar.co/2018/07/02/tuning-the-jvm-g1gc-garbage-collector-flags-for-minecraft/)   
+* Оптимизация аргументов для клиента: [`клик`](https://cwelth.com/manuals.php?mid=2)[¹](https://docs.google.com/document/d/1Y9bijAyuXMlbCs9ttR5X1DOGzK-yq353zS70X01M9hY/edit?usp=sharing) [²](https://pastebin.com/VX5K9NW7) [³](https://gist.github.com/nightloli/36a6ac3558449452b121db030c86ee27)  
+* Матчасть про **JVM флаги** на хабре: [`клик`](https://habr.com/ru/post/160049/)
 
 ```
 Флаги, не описанные в статьях выше:
