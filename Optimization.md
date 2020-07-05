@@ -76,7 +76,7 @@
 
 На официальной вики майнкрафта есть [такой гайд](https://minecraft.gamepedia.com/Tutorials/Update_LWJGL_(Legacy)), но в новых майнкрафтах используется последний nightly билд lwjgl, а не который по ссылке в вики. Ночной билд можно найти по [этой ссылке](https://github.com/asanetargoss/lwjgl/releases/tag/nightly-20161208), а также, помимо путей из вики, части lwjgl лежат в ```.minecraft/libraries/org/lwjgl/lwjgl```.
 
-Также можно обновить [vecmath](https://github.com/hharrison/vecmath/releases), который лежит в ```.minecraft/libraries/java3d/vecmath```.
+Также можно обновить [vecmath](https://mvnrepository.com/artifact/javax.vecmath/vecmath), который лежит в ```.minecraft/libraries/java3d/vecmath```.
 
 ### **Отключение логов**
 
