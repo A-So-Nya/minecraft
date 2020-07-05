@@ -9,8 +9,7 @@
 * Оптимизация сборщика мусора **G1GC** (_Aikar's arguments_): [`клик`](https://aikar.co/2018/07/02/tuning-the-jvm-g1gc-garbage-collector-flags-for-minecraft/)   
 * Оптимизация аргументов для клиента: [`клик`](https://cwelth.com/manuals.php?mid=2)[¹](https://docs.google.com/document/d/1Y9bijAyuXMlbCs9ttR5X1DOGzK-yq353zS70X01M9hY/edit?usp=sharing) [²](https://pastebin.com/VX5K9NW7) [³](https://gist.github.com/nightloli/36a6ac3558449452b121db030c86ee27)  
 * Матчасть про **JVM флаги** на хабре: [`клик`](https://habr.com/ru/post/160049/)
-
-
+#
 Флаги, не описанные в статьях выше:
 * **`-XX:+UseStringDeduplication`** — GC будет пытаться экономить память, уничтожая повторяющиеся строки, в обмен на большее использование процессора из-за большего объёма сканируемой памяти. Потенциально может cэкономить до 13,5% оперативной памяти.
 * **`-XX:-DontCompileHugeMethods`** — отключает лимит на длинну методов, которые JVM может скомпилировать. Пруфов пользы и вреда нет.
