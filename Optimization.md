@@ -29,7 +29,7 @@
 |[OptiFine](https://optifine.net/downloads)|Расширенные настройки графики, оптимизация для некропк, шейдеры для йобапк.|
 |[Phosphor](https://www.curseforge.com/minecraft/mc-mods/phosphor)|Заметные оптимизации светового движка.|
 |[Lithium](https://www.curseforge.com/minecraft/mc-mods/lithium)|Значительные бусты физики, загрузки чанков, ИИ мобов, редстоуна, etc.|
-|[Sodium](https://github.com/jellysquid3/sodium-fabric)|Мод в альфе, компилить надо самому.|
+|[Sodium](https://www.curseforge.com/minecraft/mc-mods/sodium)|ВНЕЗАПНО релизнулся. По заявлению автора, бустит фпс в 400%, что правда.|
 |[OptiFabric](https://www.curseforge.com/minecraft/mc-mods/optifabric)|Без этой штучки фабрик и оптифайн не дружат.|
 |[FastFurnace](https://www.curseforge.com/minecraft/mc-mods/fast-furnace-for-fabric) и [FastWorkbench](https://www.curseforge.com/minecraft/mc-mods/fastbench-for-fabric)|Кэширование рецептов верстака и печки, что способствует экономии процессорного времени. Эффект заметен лишь на больших серверах с множеством баз. В сингле вряд ли почувствуется.|
 > **TIP:** В новейших версиях (1.14+) появился новый мод-лоадер: `Fabric`. Он смог составить конкуренцию всем привычному Forge, что является показателем и огромным достижением, и к фабрику уже тоже имеются оптимизационные моды.  
