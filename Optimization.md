@@ -4,20 +4,18 @@
 
 ## Оптимизация аргументов запуска
 
-Аргументы запуска (_**JVM флаги**_) — отличный способ облегчить жизнь твоему сборщику мусора и в целом начать использовать ресурсы комьютера более эффективно. Учти, что некоторым флагам может понадобиться полная версия джавы, т. е. **[`JDK`](https://adoptopenjdk.net/)** (или **[`серверная JRE`](https://www.oracle.com/java/technologies/javase-server-jre8-downloads.html)**)  
+Аргументы запуска (_**JVM флаги**_) — отличный способ облегчить жизнь твоему сборщику мусора и в целом начать использовать ресурсы комьютера более эффективно. Учти, что некоторым флагам может понадобиться полная версия джавы, т. е. **[`JDK`](https://adoptopenjdk.net/)**. (или **[`серверная JRE`](https://www.oracle.com/java/technologies/javase-server-jre8-downloads.html)**)  
 #
 * Оптимизация сборщика мусора **G1GC** (_Aikar's arguments_): [`клик`](https://aikar.co/2018/07/02/tuning-the-jvm-g1gc-garbage-collector-flags-for-minecraft/)   
 * Оптимизация аргументов для клиента: [`клик`](https://cwelth.com/manuals.php?mid=2)[¹](https://docs.google.com/document/d/1Y9bijAyuXMlbCs9ttR5X1DOGzK-yq353zS70X01M9hY/edit?usp=sharing) [²](https://pastebin.com/VX5K9NW7) [³](https://gist.github.com/nightloli/36a6ac3558449452b121db030c86ee27)  
 * Матчасть про **JVM флаги** на хабре: [`клик`](https://habr.com/ru/post/160049/)
-
-```
+#
 Флаги, не описанные в статьях выше:
--XX:+UseStringDeduplication — сборщик мусора будет пытаться экономить память, уничтожая повторяющиеся строки, в обмен на большее использование процессора из-за большего объёма сканируемой памяти. Потенциально может cэкономить до 13,5% оперативной памяти.
--XX:-DontCompileHugeMethods — отключает лимит джавы на длинну методов, которые она может скомпилировать. Пруфов пользы и вреда нет.
--server — меняет некоторые дефолтные значения JVM-флагов и использует другой компилятор байткода, применяющий больше оптимизаций при компиляции. Оптимизированный байткод обещает outperform even advanced static analysis and compilation techniques — https://stackoverflow.com/questions/198577/real-differences-between-java-server-and-java-client
--Dorg.lwjgl.util.NoChecks=True — отключает state tracking и дополнительные проверки во время игры, за счёт чего даёт немного производительности.
--Dforge.forceNoStencil=true — у некоторых людей лечит лаги при загрузке чанков на 1.7.10 — https://forum.feed-the-beast.com/threads/1-7-10-chunk-generation-lag.48182/page-3
-```
+* **`-XX:+UseStringDeduplication`** — GC будет пытаться экономить память, уничтожая повторяющиеся строки, в обмен на большее использование процессора из-за большего объёма сканируемой памяти. Потенциально может cэкономить до 13,5% оперативной памяти.
+* **`-XX:-DontCompileHugeMethods`** — отключает лимит на длинну методов, которые JVM может скомпилировать. Пруфов пользы и вреда нет.
+* **`-server`** — меняет некоторые дефолтные значения JVM флагов и использует другой компилятор байткода, применяющий больше оптимизаций при компиляции. ([`источник`](https://stackoverflow.com/questions/198577/real-differences-between-java-server-and-java-client))
+* **`-Dorg.lwjgl.util.NoChecks=true`** — отключает state tracking и дополнительные проверки во время игры, за счёт чего даёт немного производительности.
+* **`-Dforge.forceNoStencil=true`** — у некоторых людей лечит лаги при загрузке чанков на 1.7.10. ([`источник`](https://forum.feed-the-beast.com/threads/1-7-10-chunk-generation-lag.48182/page-3))
 
 ## Оптимизация с помощью модов
 
@@ -31,7 +29,7 @@
 |[OptiFine](https://optifine.net/downloads)|Расширенные настройки графики, оптимизация для некропк, шейдеры для йобапк.|
 |[Phosphor](https://www.curseforge.com/minecraft/mc-mods/phosphor)|Заметные оптимизации светового движка.|
 |[Lithium](https://www.curseforge.com/minecraft/mc-mods/lithium)|Значительные бусты физики, загрузки чанков, ИИ мобов, редстоуна, etc.|
-|[Sodium](https://github.com/jellysquid3/sodium-fabric)|Мод в альфе, компилить надо самому.|
+|[Sodium](https://www.curseforge.com/minecraft/mc-mods/sodium)|ВНЕЗАПНО релизнулся. По заявлению автора, бустит фпс в 400%, что правда.|
 |[OptiFabric](https://www.curseforge.com/minecraft/mc-mods/optifabric)|Без этой штучки фабрик и оптифайн не дружат.|
 |[FastFurnace](https://www.curseforge.com/minecraft/mc-mods/fast-furnace-for-fabric) и [FastWorkbench](https://www.curseforge.com/minecraft/mc-mods/fastbench-for-fabric)|Кэширование рецептов верстака и печки, что способствует экономии процессорного времени. Эффект заметен лишь на больших серверах с множеством баз. В сингле вряд ли почувствуется.|
 > **TIP:** В новейших версиях (1.14+) появился новый мод-лоадер: `Fabric`. Он смог составить конкуренцию всем привычному Forge, что является показателем и огромным достижением, и к фабрику уже тоже имеются оптимизационные моды.  
